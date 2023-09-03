@@ -1,0 +1,444 @@
+<!-- KNOW THE ELEMENTS BETTER, KNOW THE ELEMENTS FROM INSIDE OUT, KNOW THE ELEMENTS BY HEART -->
+
+
+<!-- BASIC HTML SYNTAX IN THE COMMENTS -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    /head content goes here
+</head>
+<body>
+    /all the visible stuff goes here
+</body>
+</html> -->
+<!-- =================================== -->
+
+
+<!--  Doctype HTML is a declaration that tells the browser what version of HTML the document is written in. This declaration appears as the very first line in an 
+    HTML file -->
+<!DOCTYPE html>
+<!-- The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect. -->
+
+
+
+
+
+<!-- this lang='en' defines the language of the website -->
+<html lang="en">
+
+<head>
+    <!-- meta data -->
+    <!-- meta defines the meta data about the HTML documents  -->
+    <!-- meta data won't be visible in the website page but it helps with alot of facts in the backside of the webstie -->
+
+    <!-- ENCODING----------------------- -->
+    <!-- charset means = character set, Specifies the character encoding for the HTML document basically lets you use all the modern character and emoji and stuff -->
+    <!-- REMEMBER charset needs to be at the top of the <header></header> tag -->
+    <meta charset="UTF-8">
+
+    <!-- By default, Web servers and Web browsers use ISO-8859-1 (Latin1) encoding to process Web pages. Following is an example to set UTF-8 encoding -->
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8" />
+
+    <!-- To serve the static page with traditional Chinese characters, the webpage must contain a <meta> tag to set Big5 encoding -->
+    <meta http-equiv="Content-Type" content="text/html; charset = Big5" />
+    <!-- ENCODING END------------------ -->
+
+
+
+
+
+    <!-- this tag is not important though if you're not targeting way too old browser -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+    <!-- meta name="viewport" can be used JUST ONCE in the <head>, this is the variation in VIEWPORT just for syntax purpose -->
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.5, user-scalable=no, shrink-to-fit=no">
+    <!-- minimum-scale is optional -->
+    <!-- USER-SCALABLE=NO disable zooming in the page -->
+    <!-- shrink-to-fit=no, I'm not clear about this Attribute value yet -->
+
+
+    <!-- this description will be viewable in the search result  -->
+    <meta name="description" content="This is the content search result will show after the main link">
+
+    <!-- THIS sets the author of the website which is helpful in SEO -->
+    <meta name="author" content="Mahinul Abid" />
+
+    <!-- defines the keywords to search the website which helps in SEO -->
+    <meta name="keywords" content="HTML, Meta Tags, Metadata" />
+
+
+    <!-- you can set COOKIES in html file in the <head> using this syntax -->
+    <meta http-equiv="cookie" content="userid = xyz; expires = Wednesday, 08-Aug-15 23:59:59 GMT;" />
+
+    <!-- Specifies one of the software packages used to generate the document (not used on hand-authored pages). -->
+    <meta name="generator" content="FrontPage 4.0">
+        
+
+    <!-- When running in a browser on a mobile phone, <meta name="format-detection"/> determines whether or not telephone numbers in the HTML content will appear as 
+        hypertext links. The user can click a link with a telephone number to initiate a phone call to that phone number. -->
+    <meta name="format-detection" content="telephone:no">
+    <!-- content="telephone=no" indicates that telephone numbers in the HTML code should not appear as hypertext links. yes is the opposite -->
+
+
+
+
+
+
+    <!-- HTTP EQUIV ======================================================== -->
+    <!-- <meta http-equiv="content-security-policy|content-type|default-style|refresh"> -->
+
+    <!-- this meta keyword refresh the page every 5 seconds, MDN reference suggests that it should be more than 20 hours -->
+    <meta http-equiv="refresh" content="5">
+
+    <!-- Following is an example of redirecting current page to another page after 5 seconds. If you want to redirect page immediately then do not specify 
+        content attribute. -->
+    <!--  The value "refresh" should be used carefully, as it takes the control of a page away from the user. Using "refresh" will cause a failure in 
+        USER EXPERIENCE -->
+    <meta http-equiv="refresh" content="5; url = http://www.tutorialspoint.com" />
+
+
+    <!-- Specifies a content policy for the document. -->
+    <meta http-equiv="content-security-policy" content="default-src 'self'">
+
+    <!-- 	Specified the preferred style sheet to use -->
+    <!-- Note: The value of the content attribute must match the value of the title attribute on a link element in the same document, or it must match the value of the title attribute on a style element in the same document -->
+    <meta http-equiv="default-style" content="the document's preferred stylesheet">
+
+    <!-- HTTP EQUIV ======================================================== -->
+
+
+
+
+    <!-- OG =============================== -->
+
+    <!-- Open Graph meta tags are snippets of code that control how URLs are displayed when shared on social media. -->
+    <!-- They’re part of Facebook’s Open Graph protocol and are also used by other social media sites, including LinkedIn and Twitter (if Twitter Cards are absent). -->
+    <meta property="og:title" content="How to Become an SEO Expert (8 Steps)" />
+    <meta property="og:description" content="Get from SEO newbie to SEO pro in 8 simple steps." />
+    <meta property="og:image" content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png" />
+    <!-- Facebook lists 17 OG tags in their official documentation -->
+    <!-- LINKS TO THE 17 OG TAGS AVAILABLE HERE: https://developers.facebook.com/docs/sharing/webmasters/ -->
+
+    <!-- OG ================================== -->
+        
+
+
+
+
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body{
+            font-size: 16px;
+        }
+
+        .car{
+            background: red;
+        }
+    </style>
+
+
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="./styles.css">
+
+
+
+
+
+
+
+    <!-- using website icon in tab -->
+    <link rel="icon" href="./src/img/svg/logo.png">
+    <!-- or -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+
+    <!--    IMAGE PRELOAD   -->
+<!--   ==========================================================   -->
+    <!--   I can preload images for good user experience    -->
+    <link rel="preload" as="image" href="./src/image/image1.jpg">
+
+
+    
+
+
+
+    <!-- this tag's content will be tabs name in the browser -->
+    <title>HTML BASIC SYNTAX AND RULES</title>
+</head>
+
+<body>
+    <!-- CSS -->
+    <!-- three types of CSS -->
+    <!-- 1. INLINE CSS -->
+    <!-- 2. EXTERNAL CSS -->
+    <!-- 3. INTERNAL CSS -->
+
+    <!-- INLINE CSS -->
+    <h1 style="color:blue;">A Blue Heading</h1>
+
+
+
+
+
+
+
+    <!-- The HTML <picture> Element -->
+    <!-- good for responsive website -->
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg" alt="something">
+    </picture>
+
+
+
+
+
+
+
+    <!-- html class & id -->
+    <h1 class="nav-header">Navigation header</h1>
+    <h1 id="myHeader">My Header</h1>
+
+
+
+
+    
+    <!-- HTML IFRAME -->
+    <iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
+
+    <!-- when someone clicks a link, open iframe -->
+    <!-- The target attribute of the link must refer to the name attribute of the iframe -->
+    <iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+    <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+
+
+    <!-- HTML LIST-->
+    <!-- unordered list -->
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <!-- ordered list -->
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <!-- HTML Description Lists -->
+    <!-- The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term: -->
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+
+
+
+
+
+    <!-- HTML BOLD TEXT======================================================================== -->
+    <!-- two ways to use put bold text -->
+    <b>Hello World</b>    <!-- generic bold tag -->
+    
+    <!-- the best way to add bold text to page is <strong> tag,(found in one document) -->
+    <strong>Hello world strong</strong>
+    <!-- Both the tags have the same functioning, but <strong> tag adds semantic strong importance to the text -->
+
+    <!-- HTML BOLD TEXT======================================================================== -->
+    
+    
+
+
+    <!-- preserve white space -->
+    <!-- NOTE: HTML doesn't save extra white space. If you press 3 space it will count as one -->
+    <!-- to fix this use <pre></pre> tag which reserves every white space -->
+    <pre> This is some text     with alot of white spaces.</pre>
+
+
+
+
+
+
+
+
+    <!-- =================================================================================================================== -->
+    <!-- HTML COMPUTER CODE -->
+    <!-- The HTML <code> element  is used to define a piece of computer code. 
+        The content inside is displayed in the browser's default monospace font. -->
+    <code>
+        x = 5;
+        y = 6;
+        z = x + y;
+    </code>
+    <!-- NOTE: that the <code> element does not preserve extra whitespace and line-breaks. -->
+    <!-- To fix this, you can put the <code> element inside a <pre></pre> element: -->
+    <pre>
+        <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+        </code>
+    </pre>
+
+
+
+
+    <!-- The HTML <kbd> element is used to define keyboard input. 
+        The content inside is displayed in the browser's default monospace font. -->
+    Save the document by pressing <kbd>Ctrl + S</kbd>
+
+    <!-- The HTML <samp> element is used to define sample output from a computer program. 
+        The content inside is displayed in the browser's default monospace font. -->
+    <!-- <samp></samp> -->
+    Message from my computer:
+    <samp>File not found.<br>Press F1 to continue</samp>
+
+    <!-- The HTML <var> element  is used to define a variable in programming or in a mathematical expression. 
+        The content inside is typically displayed in italic -->
+    <!-- <var></var> -->
+    The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.
+
+    <!-- summary -->
+    <!-- 
+        The <kbd> element defines KEYBOARD INPUT
+        The <samp> element defines sample OUTPUT from a COMPUTER PROGRAM
+        The <code> element defines a PIECE of COMPUTER CODE
+        The <var> element defines a VARIABLE in PROGRAMMING or in a MATHEMATICAL EXPRESSION
+        The <pre> element defines PREFORMATTED TEXT
+     -->
+    
+    <!-- =================================================================================================================== -->
+    <!-- HTML COMPUTER CODE -->
+
+
+
+
+
+
+    <!-- HTML ENTITIES -->
+    <!-- Character entities are used to display reserved characters in HTML. Such as HTML tags -->
+    <!-- since we can't directly type those characters like < or > we use code like &lt; or &#60 for (<)  -->
+    <!-- 
+        &entity_name;
+
+        OR
+
+        &#entity_number;
+     -->
+    <!-- 
+          non-breaking space 	&nbsp; 	&#160;
+        < less than             &lt;    &#60;
+        > greater than	&gt;	&#62;
+        &	ampersand	&amp;	&#38;
+        "	double quotation mark	&quot;	&#34;
+        '	single quotation mark (apostrophe)	&apos;	&#39;
+        ¢	cent	&cent;	&#162;
+        £	pound	&pound;
+        ¥	yen	&yen;
+        €	euro	&euro;
+        ©	copyright	&copy;
+        ®	registered trademark	&reg;
+     -->
+    <p>This is a less than sign in entity_name code &lt;</p>
+    <p>This is a less than sign in entity_number code &#60;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ATTRIBUTES======================================================================================== -->
+    <!-- All HTML ELEMENTS can have attributes -->
+    <!-- Attributes provide additional information about elements -->
+    <!-- Attributes are always specified in the START TAG -->
+    <!-- Attributes usually come in name/value pairs like: name="value" -->
+    <img src="img_girl.jpg" alt="nothing">
+    <a href="facebook.com">Facebook</a>
+    <!-- HERE the "src" & "href" are attributes that tells additional information about the tag -->
+    <!-- ATTRIBUTES======================================================================================== -->
+
+
+    <!-- BASIC TAG VARIATION INTRODUCTION -->
+    <!-- The HTML <blockquote> element defines a section that is quoted from ANOTHER SOURCE -->
+    <!-- and <blockquote> needs an attribute that is cite which defines from which website I have taken this quote  -->
+    <blockquote cite="facebook.com/post-1232">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every 
+        level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which 
+        they live.
+    </blockquote>
+    
+    <!-- The HTML <q> tag defines a short quotation. Browsers normally insert quotation marks around the quotation. -->
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+
+
+
+
+    <!-- The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM". -->
+    <!-- Use the title attribute to show the description for the abbreviation/acronym when you mouse over the element.      -->
+    The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+
+
+
+
+    <!-- The HTML <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). -->
+    <!-- A person's name is not the title of a work. -->
+    <!-- The text in the <cite> element usually renders in italic. -->
+    <cite>The Scream</cite> by Edvard Munch. Painted in 1893.
+
+
+
+    <!-- LINKS -->
+    <a href="facebook.com">Facebook</a>
+
+    <!-- The target attribute specifies where to open the linked document. By default, the linked page will be displayed in the current browser window.-->
+    <!--OPTIONAL TO USE: rel=”noopener” is an HTML attribute that can be added to external links. It prevents the opening page to gain any kind of access to 
+        the original page.  -->
+    <!-- OPTIONAL TO USE: title="content", this content will be shown as tooltip when user hover over the link -->
+    <a rel="noopener" href="https://www.w3schools.com" target="_blank" title="Some title">Visit W3Schools!</a>
+    <!-- target:_self - Default. Opens the document in the same window/tab as it was clicked. -->
+    <!-- target:_blank - Opens the document in a new window or tab -->
+    <!-- target:_parent - Opens the document in the parent frame -->
+    <!-- target:_top - Opens the document in the full body of the window -->
+     
+    <!-- add a mail Link -->
+    <a href="mailto:m.bluth@example.com">Click here to send a mail immidiately</a>
+
+    <!-- add cell phone number in a proper way -->
+    <a href="tel:+123456789">click here to make a call immidiately</a>
+
+    <!-- DOWNLOAD ATTRIBUTE Causes the browser to treat the linked URL as a download -->
+    <a download href="https://scontent.fdac11-1.fna.fbcdn.net/v/t39.30808-6/318094143_116423524629613_8892529037675399049_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5cd70e&_nc_eui2=AeFog2bFHNsnqVcqeA4UVM1Y5a1ZivTlROvlrVmK9OVE6zYHTBmRG7FQoR5pXwTbVfboJUL_7cAp14mRXKQaOt80&_nc_ohc=nPHqalK9XlgAX_HmzGR&_nc_ht=scontent.fdac11-1.fna&oh=00_AfD8Lvl89gM4wtgjtL4_8I-1Zieu_F_aCkBjDsab1sLh-w&oe=63948494"  title="Some title">Visit W3Schools!</a>    
+
+    
+
+
+
+
+
+
+
+
+</body>
+
+</html>
